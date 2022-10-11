@@ -1,0 +1,65 @@
+      CLR
+      =     "YELLOW_LED"
+      CLR
+      O     "BUTTON0"
+      O     "BUTTON1"
+      O     "BUTTON2"
+      JCN   reset
+
+      L     W#0
+      L     "PASS"
+      ==I
+      JC    sifir
+
+      L     W#1
+      L     "PASS"
+      ==I
+      JC    bir
+
+      L     W#2
+      L     "PASS"
+      ==I
+      JC    iki
+
+      JU    cikis
+
+sifir: SET
+      A     "BUTTON0"
+      AN    "BUTTON1"
+      AN    "BUTTON2"
+      JCN   cikis
+      L     W#1
+      T     "PASS"
+      JU    cikis
+
+bir:  SET
+      A     "BUTTON0"
+      AN    "BUTTON1"
+      A     "BUTTON2"
+      JCN   cikis
+      L     W#2
+      T     "PASS"
+      JU    cikis
+
+iki:  SET
+      A     "BUTTON0"
+      A     "BUTTON1"
+      A     "BUTTON2"
+      JCN   cikis
+      L     W#3
+      T     "PASS"
+      CLR
+      =     "RED_LED"
+      SET
+      =     "GREEN_LED"
+      JU    cikis
+
+reset: L    W#0
+      T     "PASS"
+      SET
+      =     "RED_LED"
+      CLR
+      =     "GREEN_LED"
+      JU    cikis
+
+cikis: NOP 0
