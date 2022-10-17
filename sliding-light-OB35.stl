@@ -1,0 +1,10 @@
+      L     "CNT"
+      T     "OUT1"
+      RLD   1
+      T     "CNT"
+      L     256
+      >=I
+      JCN   CONT
+      L     1
+      T     "CNT"
+CONT: NOP 0
