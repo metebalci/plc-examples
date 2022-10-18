@@ -9,17 +9,21 @@ Some very basic examples I run on S7-314C-2 DP. I only use this repo as a person
 
 # S7-314C-2 DP
 
+- It consists of two integrated I/O modules
+- First is Analog In, Analog Out, Digital In Module
+- Second is Digital In, Digital Out Module.
+
 ## Integrated I/O default addresses
 
-The right integrated module:
-- 16x digital inputs: 124.0-125.7
-- 16x digital outputs: 124.0-125.7
-
-The left integrated module:
+The first integrated module:
 - 8x digital inputs: 126.0-126.7
 - 4x analog in:
 - 1x analog R in:
 - 2x analog out:
+
+The second integrated module:
+- 16x digital inputs: 124.0-125.7
+- 16x digital outputs: 124.0-125.7
 
 ## Wiring Notes
 
