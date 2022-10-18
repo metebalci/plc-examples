@@ -24,4 +24,5 @@ The left integrated module:
 ## Wiring Notes
 
 Digital outputs common L (24V) and M (GND) should be connected. Digital load is connected between the digital output and GND. Digital outputs do output 24V.
+
 Digital inputs common L (24V) and M (GND) should be connected. ON is 24V at digital inputs e.g. a switch/pushbutton connected between 24V and a digital input.
