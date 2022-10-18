@@ -1,0 +1,25 @@
+      CLR
+      A     "DIN0.0"
+      JCN   DIS0
+      L     "CNT"
+      T     "DOUT0"
+      JU    CHK1
+DIS0: L     0
+      T     "DOUT0"
+CHK1: CLR
+      A     "DIN0.1"
+      JCN   DIS1
+      L     "CNT"
+      T     "DOUT1"
+      JU    UPD
+DIS1: L     0
+      T     "DOUT1"
+UPD:  L     "CNT"
+      RLD   1
+      T     "CNT"
+      L     256
+      >=I
+      JCN   EXIT
+      L     1
+      T     "CNT"
+EXIT: NOP 0
